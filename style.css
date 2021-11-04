@@ -1,3 +1,54 @@
 :root {
-    --size: 1.4;
+  --background: black;
+  --color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  color: var(--color);
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.3em;
+  overflow-y: auto;
+}
+
+::selection {
+  background-color: var(--color);
+  color: var(--background);
+}
+
+.terminal .output div, .terminal .typeArea, .terminal .text {
+  padding: 2px 8px;
+  display: flex;
+}
+.terminal .suffix {
+  margin: 0 10px;
+}
+.terminal .text {
+  font-weight: normal;
+}
+
+.terminal .input {
+  width: 100%;
+  border: none;
+  outline: none;
+/*   border: 1px solid red; */
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+/*   overflow-wrap: normal; */
+  resize: none;
+/*   line-height: 1; */
 }
